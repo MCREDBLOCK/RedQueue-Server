@@ -1,0 +1,7 @@
+name: QueueServer
+version: ${project.version}
+main: rygb.tech.queueserver.Main
+api-version: 1.16
+authors: [ Redblock6 ]
+description: Simple join and quit events for the queue server, ment for MCREDBLOCK
+website: mc.redblock6.com
