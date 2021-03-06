@@ -22,23 +22,23 @@ public class CreateScoreboard {
         //bottom line
         String line = ChatColor.translateAlternateColorCodes('&', "&7&m---------------------");
         Score line1 = o.getScore(line);
-        line1.setScore(1);
+        line1.setScore(0);
 
         //player count
         Team playercount = b.registerNewTeam("playercount");
-        playercount.addEntry(ChatColor.GREEN + "" + ChatColor.GRAY);
+        playercount.addEntry(ChatColor.RED + "" + ChatColor.GRAY);
         playercount.setPrefix(ChatColor.translateAlternateColorCodes('&', "&c" + Bukkit.getOnlinePlayers().size() + "&7/" + Bukkit.getMaxPlayers()));
-        o.getScore(ChatColor.GREEN + "" + ChatColor.GRAY).setScore(2);
+        o.getScore(ChatColor.RED + "" + ChatColor.GRAY).setScore(1);
 
         //players
         String playerslineb = ChatColor.translateAlternateColorCodes('&', "&4&lPlayers in Queue");
         Score playersline = o.getScore(playerslineb);
-        playersline.setScore(3);
+        playersline.setScore(2);
 
         //top line
         String line2 = ChatColor.translateAlternateColorCodes('&', "&4&l&7&m---------------------");
         Score line2line = o.getScore(line2);
-        line2line.setScore(4);
+        line2line.setScore(3);
 
         CreateScoreboard.o = o;
         return b;
@@ -50,7 +50,7 @@ public class CreateScoreboard {
                 Scoreboard b = p.getScoreboard();
 
                 b.getTeam("playercount").setPrefix(ChatColor.translateAlternateColorCodes('&', "&c" + Bukkit.getOnlinePlayers().size() + "&7/50"));
-                o.getScore(ChatColor.AQUA + "" + ChatColor.GRAY).setScore(2);
+                o.getScore(ChatColor.RED + "" + ChatColor.GRAY).setScore(1);
             } else if (setscoreboard.equals(true)) {
                 p.setScoreboard(new CreateScoreboard().normal());
             }

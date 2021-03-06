@@ -2,6 +2,7 @@ package rygb.tech.queueserver.mccore.events;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -21,6 +22,7 @@ public class JoinLeaveEvent implements Listener {
         playersinqueue++;
         p.sendTitle(ChatColor.translateAlternateColorCodes('&', "&4&lIN QUEUE"), ChatColor.translateAlternateColorCodes('&', "&fYou'll be sent to &chub &fshortly"), 5, 24000, 5);
         p.playSound(p.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 100, 1);
+        p.setGameMode(GameMode.ADVENTURE);
 
         event.setJoinMessage(ChatColor.translateAlternateColorCodes('&', "&4&l> &c" + player + " &fjoined the queue. Their position is &c#" + playersinqueue));
 
@@ -38,7 +40,7 @@ public class JoinLeaveEvent implements Listener {
         String player = event.getPlayer().getDisplayName();
 
         //create scoreboard for all players
-        for (Player loopplayer: Bukkit.getOnlinePlayers()) {
+        for (Player loopplayer : Bukkit.getOnlinePlayers()) {
             CreateScoreboard.setScoreboard(loopplayer, "Normal", false);
         }
 
