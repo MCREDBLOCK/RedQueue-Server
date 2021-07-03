@@ -13,7 +13,7 @@ public class CreateScoreboard {
         Scoreboard b = Bukkit.getScoreboardManager().getNewScoreboard();
 
         String s1 = ChatColor.translateAlternateColorCodes('&', "&4&lQUEUE");
-        Objective o = b.registerNewObjective("QUEUE", "dummy", s1);
+        Objective o = b.registerNewObjective("QUEUE", "dummy");
 
         //set display slot
         o.setDisplaySlot(DisplaySlot.SIDEBAR);

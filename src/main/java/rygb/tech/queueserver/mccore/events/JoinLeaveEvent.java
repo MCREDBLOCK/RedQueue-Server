@@ -21,7 +21,7 @@ public class JoinLeaveEvent implements Listener {
 
         playersinqueue++;
         p.sendTitle(ChatColor.translateAlternateColorCodes('&', "&4&lIN QUEUE"), ChatColor.translateAlternateColorCodes('&', "&fYou'll be sent to &chub &fshortly"), 5, 24000, 5);
-        p.playSound(p.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 100, 1);
+        p.playSound(p.getLocation(), Sound.BLOCK_NOTE_BASS, 100, 1);
         p.setGameMode(GameMode.ADVENTURE);
 
         event.setJoinMessage(ChatColor.translateAlternateColorCodes('&', "&4&l> &c" + player + " &fjoined the queue. Their position is &c#" + playersinqueue));
